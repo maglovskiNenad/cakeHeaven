@@ -1,0 +1,32 @@
+
+<div class="row mt-3">
+    <div class="col-6 offset-3">
+        <form>
+            <div class="form-group">
+              <label for="firstNameInput">Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="firstNameInput" 
+                name="firstNameInput" 
+                placeholder="Name" 
+                [(ngModel)]="message.name">
+            </div>
+            <div class="form-group mt-3">
+              <label for="emailInput">Email address</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="emailInput" 
+                name="emailInput" 
+                placeholder="name@example.com" 
+                [(ngModel)]="message.email">
+            </div>
+            <div class="form-group">
+              <label for="messageInput">Message</label>
+              <textarea class="form-control" id="messageInput" name="messageInput" [(ngModel)]="message.message" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary mt-3" (click)="onSendClicked()">Send</button>
+        </form>
+    </div>
+</div>

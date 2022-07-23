@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col">
+        <ngb-carousel *ngIf="slideshow">
+            <ng-template ngbSlide *ngFor="let slide of slideshow">
+                <div class="picsum-img-wrapper">
+                    <img [src]="slide.image" width="100%" alt="image">
+                </div>
+                <div class="carousel-caption">
+                    <h1>{{slide.text}}</h1>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    
+
+    </div>
+</div>

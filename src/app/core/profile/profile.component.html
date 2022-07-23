@@ -1,0 +1,49 @@
+<div class="row mt-3">
+    <div class="col-6 offset-3">
+        <form>
+            <div class="form-group">
+              <label for="firstNameInput">First Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="firstNameInput" 
+                name="firstNameInput" 
+                placeholder="Your first name" 
+                [(ngModel)]="newUser.firstName"
+                [disabled]="!editMode">
+            </div>
+            <div class="form-group mt-3">
+              <label for="lastNameInput">Last Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="lastNameInput" 
+                name="lastNameInput" 
+                placeholder="Your last name" 
+                [(ngModel)]="newUser.lastName"
+                [disabled]="!editMode">
+            </div>
+            <div class="form-group mt-3">
+              <label for="emailInput">Email address</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="emailInput" 
+                name="emailInput" 
+                placeholder="name@example.com" 
+                [(ngModel)]="newUser.email"
+                [disabled]="!editMode">
+            </div>
+            <div *ngIf="!editMode">
+                <button class="btn btn-primary mt-3" (click)="onEditClicked()">Edit</button>
+            </div>
+            <div *ngIf="editMode" class="row mt-3">
+                <div class="col">
+                    <button class="btn" (click)="onEditCancel()">Cancel</button>
+                    <button class="btn btn-primary ml-auto" (click)="onEditOk()">OK</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
